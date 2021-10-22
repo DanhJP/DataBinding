@@ -12,14 +12,14 @@
         <TextBox x:Name="textoTextBox"
                  Margin="8,4"
                  TextChanged="textoTextBox_TextChanged"/>
-        
         <StackPanel>
             <TextBlock Margin="8"
                        Text="Texto escrito:"/>
             <TextBlock  x:Name="textoTextBlock"
                         FontStyle="Italic"
                         HorizontalAlignment="Center"
-                        Margin="8"/>
+                        Margin="8"
+                        Text="{Binding ElementName=textoTextBox, Path=Text}"/>
         </StackPanel>
 
     </StackPanel>
