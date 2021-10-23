@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DataBinding.Collections"
         mc:Ignorable="d"
-        Title="Data Binding a una colección" Height="200" Width="300">
+        Title="Data Binding a una colección" Height="200" Width="400">
     <DockPanel Margin="8">
         <Border DockPanel.Dock="Right"
                 BorderBrush="LightGray"
@@ -38,13 +38,15 @@
                        VerticalAlignment="Center"/>
                 <TextBox Margin="2"
                          VerticalAlignment="Center"
-                         x:Name="userTextBox"/>
+                         x:Name="userTextBox"
+                         />
             </DockPanel>
         </Border>
 
         <ListBox SelectionMode="Single"
                  DisplayMemberPath="Name"
                  x:Name="usersListBox"
-                 SelectionChanged="usersListBox_SelectionChanged"/>
+                 ItemsSource="{Binding}"
+                 IsSynchronizedWithCurrentItem="True"/>
     </DockPanel>
 </Window>
